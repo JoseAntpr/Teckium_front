@@ -1,0 +1,8 @@
+#dependecia de node
+node_modules/
+
+# Archivos de distribución
+dist/
+
+#db
+db/

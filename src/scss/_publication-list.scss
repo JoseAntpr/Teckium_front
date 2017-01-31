@@ -1,0 +1,27 @@
+//Variables
+$publication-image-width: 360px;
+$publication-border-color: $color-grey;
+$publication-background-color: white;
+//Styles
+.publication-list{
+
+  .publication{
+    background-color: $publication-background-color;
+    border: 1px solid $publication-border-color;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    .publication-image{
+      width:$publication-image-width;
+
+    }
+
+    .abstract{
+      @include text-overflow-ellipsis;
+    }
+
+  }
+
+}

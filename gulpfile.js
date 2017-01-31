@@ -14,7 +14,7 @@ gulp.task("default",["compile-sass"],function(){
   });
 
   //Cuando haya cambio compila sass
-  gulp.watch("./src/scss/style.scss",["compile-sass"]);
+  gulp.watch("./src/scss/*.scss",["compile-sass"]);
   gulp.watch("./*.html",function(){
     browserSync.reload();
     notify().write("Navegador recargado");

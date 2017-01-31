@@ -1,0 +1,23 @@
+//font families
+
+$main-font-family: "Roboto Condensed", sans-serif;
+$titles-font-family: "Oswald", sans-serif;
+$body-font-family: $main-font-family;
+
+//font sizes
+
+$font-size-base: 16px;
+$font-size-small: $font-size-base - 6px;
+$font-size-large: $font-size-base + 6px;
+$font-size-h1: $font-size-base + 15px;
+$font-size-h2: $font-size-base + 12px;
+$font-size-h3: $font-size-base + 9px;
+$font-size-h4: $font-size-base + 6px;
+$font-size-h5: $font-size-base + 3px;
+
+// Components color
+$color-primary: #FF7E67;
+$color-secondary: #07689F;
+
+$main-text-color: black;
+$body-background-color: #FAFAFA;

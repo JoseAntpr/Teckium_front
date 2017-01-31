@@ -7,7 +7,7 @@ var browserSync = require('browser-sync').create();
 
 // Definimos la tarea por defecto de gulp
 gulp.task("default",["compile-sass"],function(){
-  notify.write("Iniciando gulp");
+  notify().write("Iniciando gulp");
   //Cuando haya cambios en cualquier *scss, compila sass
   browserSync.init({
     server: "./"
@@ -17,7 +17,7 @@ gulp.task("default",["compile-sass"],function(){
   gulp.watch("./src/scss/style.scss",["compile-sass"]);
   gulp.watch("./*.html",function(){
     browserSync.reload();
-    notify.write("Navegador recargado");
+    notify().write("Navegador recargado");
 
   });
 

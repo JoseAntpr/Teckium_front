@@ -22,3 +22,8 @@ $color-secondary: #07689F;
 $main-text-color: black;
 $body-background-color: #FAFAFA;
 $color-grey: rgba(0,0,0,.09);
+
+//responsive breakpoints
+$large-screen-width: 1024px; //Ipad en landscape o superior
+$medium-screen-width: 768px;
+$small-screen-width: $medium-screen-width - 1;

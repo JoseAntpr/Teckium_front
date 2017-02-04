@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body{
   background-color: $body-background-color;
   color:$main-text-color;
@@ -5,4 +9,26 @@ body{
   font-size: $font-size-base;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .container{
+    margin-top: 89px;
+    @include if-is-small-screen{
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @include if-is-medium-screen{
+      width: 100%;
+      max-width: 660px;
+    }
+
+    @include if-is-large-screen{
+      width: 100%;
+      max-width: 660px;
+    }
+  }
+
 }

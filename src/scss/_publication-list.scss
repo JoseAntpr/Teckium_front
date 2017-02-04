@@ -1,9 +1,11 @@
 //Variables
-$publication-image-width: 360px;
+$publication-image-width: 300px;
 $publication-border-color: $color-grey;
 $publication-background-color: white;
 //Styles
 .publication-list{
+
+
 
   .publication{
     background-color: $publication-background-color;
@@ -12,14 +14,53 @@ $publication-background-color: white;
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+    .author{
+      display: flex;
+      flex-direction: row;
+      align-self: flex-start;
+      .author-image{
+        height: 36px;
+        width: 36px;
+        border-radius: 100%;
+        margin-right: 10px;
+      }
+      .time{
+        margin-left: auto;
+      }
+    }
+
+    .title{
+      font-size: $font-size-h2;
+      align-self: center;
+    }
 
     .publication-image{
       width:$publication-image-width;
+      align-self: center;
 
     }
 
     .abstract{
       @include text-overflow-ellipsis;
+
+    }
+
+    .button-space{
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+      .favourite-button{
+        margin-right: auto;
+      }
+      .comment-button{
+        margin-left: auto;
+      }
+
     }
 
   }

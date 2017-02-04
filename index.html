@@ -5,16 +5,39 @@
   <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0 , maxium-scale=1.0">
   <title>Teckium</title>
   <link rel="stylesheet" href="dist/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
-  <header class="web-header">
+  <nav class="navbar">
     <h1 class="web-title">Teckium</h1>
-  </header>
+      <!--<div class="icon-menu"><i class="material-icons">view_headline</i></div>-->
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Front-end</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Back-end</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Machine Learning</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">IoT</a>
+        </li>
+      </ul>
+  </nav>
 
-  <main>
+
+  <main class="container">
     <section class="publication-list">
       <article class="publication">
-        <div class="author">José Antonio Palacios Ramírez</div>
+        <div class="author">
+          <img  class="author-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg/190px-Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg"
+          alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+          <div class="time"> 3 days ago</div>
+        </div>
         <div class="title">HTML, CSS y Javascript el trio calavera</div>
         <img  class="publication-image" src="http://www.murciastudio.es/wp-content/uploads/2015/01/languages.png"
         alt="publication image">
@@ -26,9 +49,17 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
           qui officia deserunt mollit anim id est laborum."
         </div>
+        <div class="button-space">
+          <div class="favourite-button"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><i class="material-icons">mode_comment</i></div>
+        </div>
       </article>
       <article class="publication">
-        <div class="author">José Antonio Palacios Ramírez</div>
+        <div class="author">
+          <img  class="author-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg/190px-Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg"
+          alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+        </div>
         <div class="title">HTML, CSS y Javascript el trio calavera</div>
         <img  class="publication-image" src="http://www.murciastudio.es/wp-content/uploads/2015/01/languages.png"
         alt="publication image">
@@ -40,9 +71,17 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
           qui officia deserunt mollit anim id est laborum."
         </div>
+        <div class="button-space">
+          <div class="favourite-button"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><i class="material-icons">mode_comment</i></div>
+        </div>
       </article>
       <article class="publication">
-        <div class="author">José Antonio Palacios Ramírez</div>
+        <div class="author">
+          <img  class="author-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg/190px-Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg"
+          alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+        </div>
         <div class="title">HTML, CSS y Javascript el trio calavera</div>
         <img  class="publication-image" src="http://www.murciastudio.es/wp-content/uploads/2015/01/languages.png"
         alt="publication image">
@@ -54,9 +93,17 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
           qui officia deserunt mollit anim id est laborum."
         </div>
+        <div class="button-space">
+          <div class="favourite-button"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><i class="material-icons">mode_comment</i></div>
+        </div>
       </article>
       <article class="publication">
-        <div class="author">José Antonio Palacios Ramírez</div>
+        <div class="author">
+          <img  class="author-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg/190px-Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg"
+          alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+        </div>
         <div class="title">HTML, CSS y Javascript el trio calavera</div>
         <img  class="publication-image" src="http://www.murciastudio.es/wp-content/uploads/2015/01/languages.png"
         alt="publication image">
@@ -67,12 +114,16 @@
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
           qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="button-space">
+          <div class="favourite-button"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><i class="material-icons">mode_comment</i></div>
         </div>
       </article>
     </section>
 
 
   </main>
-
+  <!-- Añadir main.js <script src="dist/main.js"> </script>-->
 </body>
 </html>

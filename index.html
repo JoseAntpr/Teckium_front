@@ -9,23 +9,37 @@
       rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
-    <h1 class="web-title">Teckium</h1>
+  <nav class="navbar hidden-menu">
+    <div class="navbar-xs">
+      <h1 class="web-title"><a href="index.html">Teckium</a></h1>
+      <button class="icon-menu"><i class="material-icons">list</i></button>
+    </div>
+
+    <div class="navbar-search">
+      <input class="search" type="text" placeholder="Busca un artículo">
+      <button class="button-search"><i class="material-icons">search</i></button>
+    </div>
       <!--<div class="icon-menu"><i class="material-icons">view_headline</i></div>-->
-      <ul class="navbar-list">
-        <li class="navbar-item">
-          <a href="#" class="navbar-link">Front-end</a>
-        </li>
-        <li class="navbar-item">
-          <a href="#" class="navbar-link">Back-end</a>
-        </li>
-        <li class="navbar-item">
-          <a href="#" class="navbar-link">Machine Learning</a>
-        </li>
-        <li class="navbar-item">
-          <a href="#" class="navbar-link">IoT</a>
-        </li>
-      </ul>
+    <ul class="navbar-list">
+      <li class="navbar-item">
+        <a href="#" class="navbar-link">Front-end</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="navbar-link">Back-end</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="navbar-link">Machine Learning</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="navbar-link">IoT</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="navbar-link">Login</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="navbar-link">Registrate</a>
+      </li>
+    </ul>
   </nav>
 
 
@@ -33,14 +47,16 @@
     <section class="publication-list">
       <article class="publication">
         <div class="author">
-          <img  class="author-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg/190px-Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg"
-          alt="Author image">
+          <img  class="author-image" src="/dist/img/user.jpg" alt="Author image">
           <div>José Antonio Palacios Ramírez</div>
-          <div class="time"> 3 days ago</div>
+          <div id="time" class="time">2017-2-5 24:00</div>
         </div>
-        <div class="title">HTML, CSS y Javascript el trio calavera</div>
-        <img  class="publication-image" src="http://www.murciastudio.es/wp-content/uploads/2015/01/languages.png"
-        alt="publication image">
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <picture class="publication-image">
+          <source srcset="/dist/img/languages-375.png 375w" media="(max-width: 768px)">
+          <source srcset="/dist/img/languages-375.png 375w, /dist/img/languages-520.png 520w, /dist/img/languages-768px.png 768w" media="(min-width: 768px)">
+          <img class="image" src="/dist/img/languages.png">
+        </picture>
         <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -50,19 +66,18 @@
           qui officia deserunt mollit anim id est laborum."
         </div>
         <div class="button-space">
-          <div class="favourite-button"><i class="material-icons">favorite_border</i></div>
-          <div class="comment-button"><i class="material-icons">mode_comment</i></div>
+          <button id="0" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></button>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
         </div>
       </article>
       <article class="publication">
         <div class="author">
-          <img  class="author-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg/190px-Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg"
-          alt="Author image">
+          <img  class="author-image" src="/dist/img/darth.png" alt="Author image">
           <div>José Antonio Palacios Ramírez</div>
+          <div class="time">2017-2-3 24:00</div>
         </div>
-        <div class="title">HTML, CSS y Javascript el trio calavera</div>
-        <img  class="publication-image" src="http://www.murciastudio.es/wp-content/uploads/2015/01/languages.png"
-        alt="publication image">
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <iframe class="publication-image" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
         <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -72,19 +87,22 @@
           qui officia deserunt mollit anim id est laborum."
         </div>
         <div class="button-space">
-          <div class="favourite-button"><i class="material-icons">favorite_border</i></div>
-          <div class="comment-button"><i class="material-icons">mode_comment</i></div>
+          <div id="1" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
         </div>
       </article>
       <article class="publication">
         <div class="author">
-          <img  class="author-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg/190px-Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg"
-          alt="Author image">
+          <img  class="author-image" src="/dist/img/darth.png" alt="Author image">
           <div>José Antonio Palacios Ramírez</div>
+          <div id="time" class="time">2017-1-2 24:00</div>
         </div>
-        <div class="title">HTML, CSS y Javascript el trio calavera</div>
-        <img  class="publication-image" src="http://www.murciastudio.es/wp-content/uploads/2015/01/languages.png"
-        alt="publication image">
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <picture class="publication-image">
+          <source srcset="/dist/img/languages-375.png 375w" media="(max-width: 768px)">
+          <source srcset="/dist/img/languages-375.png 375w, /dist/img/languages-520.png 520w, /dist/img/languages-768px.png 768w" media="(min-width: 768px)">
+          <img class="image" src="/dist/img/languages.png">
+        </picture>
         <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -94,19 +112,22 @@
           qui officia deserunt mollit anim id est laborum."
         </div>
         <div class="button-space">
-          <div class="favourite-button"><i class="material-icons">favorite_border</i></div>
-          <div class="comment-button"><i class="material-icons">mode_comment</i></div>
+          <div id="2" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
         </div>
       </article>
       <article class="publication">
         <div class="author">
-          <img  class="author-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg/190px-Henry_Cavill_at_the_2009_Tribeca_Film_Festival.jpg"
-          alt="Author image">
+          <img  class="author-image" src="/dist/img/user.jpg" alt="Author image">
           <div>José Antonio Palacios Ramírez</div>
+          <div id="time" class="time">2017-2-5 24:00</div>
         </div>
-        <div class="title">HTML, CSS y Javascript el trio calavera</div>
-        <img  class="publication-image" src="http://www.murciastudio.es/wp-content/uploads/2015/01/languages.png"
-        alt="publication image">
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <picture class="publication-image">
+          <source srcset="/dist/img/languages-375.png 375w" media="(max-width: 768px)">
+          <source srcset="/dist/img/languages-375.png 375w, /dist/img/languages-520.png 520w, /dist/img/languages-768px.png 768w" media="(min-width: 768px)">
+          <img class="image" src="/dist/img/languages.png">
+        </picture>
         <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -116,14 +137,164 @@
           qui officia deserunt mollit anim id est laborum."
         </div>
         <div class="button-space">
-          <div class="favourite-button"><i class="material-icons">favorite_border</i></div>
-          <div class="comment-button"><i class="material-icons">mode_comment</i></div>
+          <button id="3" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></button>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
         </div>
       </article>
+      <article class="publication">
+        <div class="author">
+          <img  class="author-image" src="/dist/img/darth.png" alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+          <div class="time">2017-2-3 24:00</div>
+        </div>
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <iframe class="publication-image" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+        <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="button-space">
+          <div id="4" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="author">
+          <img  class="author-image" src="/dist/img/darth.png" alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+          <div id="time" class="time">2017-1-2 24:00</div>
+        </div>
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <picture class="publication-image">
+          <source srcset="/dist/img/languages-375.png 375w" media="(max-width: 768px)">
+          <source srcset="/dist/img/languages-375.png 375w, /dist/img/languages-520.png 520w, /dist/img/languages-768px.png 768w" media="(min-width: 768px)">
+          <img class="image" src="/dist/img/languages.png">
+        </picture>
+        <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="button-space">
+          <div id="5" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="author">
+          <img  class="author-image" src="/dist/img/user.jpg" alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+          <div id="time" class="time">2017-2-5 24:00</div>
+        </div>
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <picture class="publication-image">
+          <source srcset="/dist/img/languages-375.png 375w" media="(max-width: 768px)">
+          <source srcset="/dist/img/languages-375.png 375w, /dist/img/languages-520.png 520w, /dist/img/languages-768px.png 768w" media="(min-width: 768px)">
+          <img class="image" src="/dist/img/languages.png">
+        </picture>
+        <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="button-space">
+          <button id="6" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></button>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="author">
+          <img  class="author-image" src="/dist/img/darth.png" alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+          <div class="time">2017-2-3 24:00</div>
+        </div>
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <iframe class="publication-image" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+        <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="button-space">
+          <div id="7" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="author">
+          <img  class="author-image" src="/dist/img/darth.png" alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+          <div id="time" class="time">2017-1-2 24:00</div>
+        </div>
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <picture class="publication-image">
+          <source srcset="/dist/img/languages-375.png 375w" media="(max-width: 768px)">
+          <source srcset="/dist/img/languages-375.png 375w, /dist/img/languages-520.png 520w, /dist/img/languages-768px.png 768w" media="(min-width: 768px)">
+          <img class="image" src="/dist/img/languages.png">
+        </picture>
+        <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="button-space">
+          <div id="8" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="author">
+          <img  class="author-image" src="/dist/img/darth.png" alt="Author image">
+          <div>José Antonio Palacios Ramírez</div>
+          <div id="time" class="time">2017-1-2 24:00</div>
+        </div>
+        <div class="title"><a href="article-detail.html">HTML, CSS y Javascript el trio calavera</a></div>
+        <picture class="publication-image">
+          <source srcset="/dist/img/languages-375.png 375w" media="(max-width: 768px)">
+          <source srcset="/dist/img/languages-375.png 375w, /dist/img/languages-520.png 520w, /dist/img/languages-768px.png 768w" media="(min-width: 768px)">
+          <img class="image" src="/dist/img/languages.png">
+        </picture>
+        <div class="abstract">"Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum."
+        </div>
+        <div class="button-space">
+          <div id="9" class="favourite-button" data-action="upvote"><i class="material-icons">favorite_border</i></div>
+          <div class="comment-button"><a href="article-detail.html#comments-list">7<i class="material-icons">mode_comment</i></a></div>
+        </div>
+      </article>
+      <div class="publication-navigation">
+        <button>Página anterior</button>
+        <button>Página siguiente</button>
+      </div>
     </section>
 
 
   </main>
+  <footer class="footer">
+    <p>Teckium &#169; 2016</p>
+    <button id="scroll-top">Subir arriba</button>
+  </footer>
   <script src="dist/main.js"> </script>
 </body>
 </html>

@@ -4,33 +4,95 @@ $web-header-text-color: white;
 
 
 //Styles
+
+
 .navbar{
   background:$web-header-background-color;
-  display: inline-block;
+  display:flex;
+  flex-direction: row;
   position: fixed;
   width: 100%;
+  padding: 5px;
+
 
   .web-title{
     color: $web-header-text-color;
-    display: inline-block;
-    text-align: left;
     margin: 0px;
     margin-top: 5px;
     margin-left: 30px;
     text-shadow: 2px 2px 0px darken($web-header-background-color, 30%);
     font-family: $titles-font-family;
+    text-indent: 32px;
+    a{
+      text-decoration: none;
+      color: $web-header-text-color;
+    }
+  }
+
+  .icon-menu{
+    display: none;
+  }
+
+  .navbar-search{
+    display: flex;
+    padding: 10px;
+    margin-left: auto;
+    position: relative;
+    .input{
+      width: 25px;
+      height: 21px;
+      background: #fcfcfc;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+    }
+
   }
 
   @include if-is-small-screen {
-    .web-title{
-      margin-left: 0px;
-      text-align: center;
+    position: relative;
+    flex-direction: column;
+    .navbar-xs{
+      display: flex;
+      flex-direction: row;
+
+      .web-title{
+        display: flex;
+        margin-left: 0px;
+        margin: auto;
+      }
+      .icon-menu{
+        display: flex;
+        padding-left: auto;
+        float:right;
+        color: white;
+      }
+
     }
-    .icon-menu{
-      float:right;
+
+    .navbar-search{
+      width: 100%;
+      border-top: solid white 1px;
+      .search{
+        width: 100%;
+        margin: auto;
+      }
+    }
+
+    .navbar-list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding:0;
+      .navbar-item{
+        text-align: center;
+        width: 100%;
+        border-top: solid white 1px;
+      }
     }
 
   }
+
 
   .navbar-list{
     float: right;

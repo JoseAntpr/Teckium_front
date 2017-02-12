@@ -1,34 +1,63 @@
+$web-footer-background-color: $color-primary;
+
 * {
   box-sizing: border-box;
 }
 
+html{
+  margin: 0;
+  padding: 0;
+  height: 100%
+}
+
 body{
+  @extend html;
   background-color: $body-background-color;
   color:$main-text-color;
   font-family: $main-font-family;
   font-size: $font-size-base;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  .container{
-    margin-top: 89px;
-    @include if-is-small-screen{
-      width: 100%;
-      max-width: 400px;
-    }
 
-    @include if-is-medium-screen{
-      width: 100%;
-      max-width: 660px;
-    }
+}
 
-    @include if-is-large-screen{
-      width: 100%;
-      max-width: 660px;
+
+form{
+  padding: 10px;
+
+  label, input, button, textarea{
+    display: block;
+    width: 100%;
+  }
+
+  label{
+    font-weight: bold;
+  }
+
+  input, textarea{
+    transition: background-color 0.25s;
+    border: 1px solid $color-primary;
+    margin: 5px 0 15px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    &:focus{
+      outline-color: $color-primary;
+      background-color: darken(white,5%);
     }
   }
+
+  button {
+    @extend input;
+    background: $color-primary;
+    font-weight: bold;
+    color: white;
+    &:hover { // button:hover
+        background-color: lighten($color-primary, 10%);
+    }
+    &:active { // button:active -> click
+        background-color: darken($color-primary, 10%);
+    }
+
+  }
+
 
 }

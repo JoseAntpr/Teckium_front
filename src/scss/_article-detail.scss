@@ -1,0 +1,67 @@
+.article-detail{
+  display: flex;
+  flex-direction: column;
+
+  .title{
+    align-self: center;
+    font-size: $font-size-h1;
+  }
+
+
+  .publication-image{
+    align-self: center;
+    width: 100vw;
+  }
+
+  .info-publication{
+    display: flex;
+    flex-direction: row;
+
+
+    .author{
+      display: flex;
+      flex-direction: row;
+      .author-image{
+        height: 36px;
+        width: 36px;
+        border-radius: 100%;
+        margin-right: 10px;
+      }
+    }
+
+    .button-space{
+      display: flex;
+      flex-direction: row;
+      margin-left: auto;
+      button {
+        background-color: transparent;
+        border: none;
+        &:focus{
+          outline: none;
+        }
+      }
+      .favourite-button{
+        margin-right: auto;
+
+        }
+      .active{
+        color:red;
+      }
+      .comment-button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        font-size: 20px;
+      }
+
+    }
+
+  }
+
+  .time{
+    margin-top: 14px;
+
+  }
+
+}

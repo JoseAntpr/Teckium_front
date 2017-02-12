@@ -1,2 +1,3 @@
-require('./app');
-require('./hello-world');
+require('./ready');
+require('./storage.js');
+require('./form.js');

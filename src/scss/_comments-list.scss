@@ -1,0 +1,51 @@
+$comment-border-color: $color-grey;
+
+//styles
+.comments-list{
+  padding-bottom: 10px;
+
+  div[class^="ui-"]{
+    display: none;
+  }
+
+  &.ideal .ui-ideal{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &.blank .ui-blank{
+    display: flex;
+  }
+
+  &.error .ui-error{
+    display: flex;
+    background-color: rgba(255,0,0,0.3);
+    border: 1px solid $comment-border-color;
+    border-radius: 3px;
+    padding: 10px;
+  }
+
+  &.loading .ui-loading{
+    display: flex;
+  }
+
+  .comment{
+    border: 1px solid $comment-border-color;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+
+    .user{
+      border-bottom: 1px solid grey;
+      padding: 10px;
+    }
+
+    .comment-text{
+      padding: 10px;
+    }
+
+  }
+
+
+
+}

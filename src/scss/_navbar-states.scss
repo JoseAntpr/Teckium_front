@@ -1,0 +1,28 @@
+.navbar{
+
+  &.show-menu{
+    .navbar-list {
+      display: flex;
+    }
+    .navbar-search{
+      display: flex;
+    }
+
+    @include if-is-medium-screen{
+      .navbar-list{display: flex;}
+    }
+
+  }
+
+  &.hidden-menu {
+    .navbar-list{
+      display: none;
+    }
+    .navbar-search{display: none;}
+    @include if-is-medium-screen{
+      .navbar-list{display: flex;}
+      .navbar-search{display: flex;}
+    }
+
+  }
+}

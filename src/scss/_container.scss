@@ -1,0 +1,22 @@
+.container{
+  min-height: 100%;
+  padding-top: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  @include if-is-small-screen{
+    padding-top: 14px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  @include if-is-medium-screen{
+    width: 100%;
+    max-width: 660px;
+  }
+
+  @include if-is-large-screen{
+    width: 100%;
+    max-width: 660px;
+  }
+}
